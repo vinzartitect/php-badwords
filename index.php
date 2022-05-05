@@ -7,10 +7,15 @@ E la mia giustizia calerà sopra di loro con grandissima vendetta e furiosissimo
 E tu saprai che il mio nome e’ quello del Signore quando farò calare la mia vendetta sopra di te. Ezechiele 25:17';
 
 // 3 Una parola da censurare viene passata dall'utente tramite parametro GET.
-$badWord = $_GET['badword'];
+// $badWord = $_GET['badword'];
+// utilizzo un ternario per non far uscire l errore iniziale
+$badWord = isset( $_GET['badword'] ) ? $_GET['badword'] : '';
+
 
 // 4 Stampare di nuovo il paragrafo e la sua lunghezza, dopo aver sostituito con tre asterischi la parola da censurare.
-$sectionCensored = str_replace( $badWord, '***', $sectionText );
+// $sectionCensored = str_replace( $badWord, '***', $sectionText );
+// usiamo ireplace per andare ad interessare qualsiasi lettera
+$sectionCensored = str_ireplace( $badWord, '***', $sectionText );
 
 ?>
 
