@@ -28,6 +28,14 @@ $sectionCensored = str_ireplace( $badWord, '***', $sectionText );
     <title>PHP Badwords</title>
 </head>
 <body>
+<!-- inseriamo un form in cui inseriamo manualmente la parola da censurare -->
+<div>
+    <p>Inserisci la parola da censurare:</p>
+    <form method="GET">
+        <input type="text" name="badword">
+        <button type="submit">Invia</button>
+    </form>
+</div>
 
 <!-- 2 stampare a schermo il paragrafo e la sua lunghezza. -->
 <div>
